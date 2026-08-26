@@ -95,6 +95,21 @@ Klik notebook sesuai urutan, lalu jalankan semua cell (`Kernel` → `Restart & R
 
 ---
 
+## 6. Jalankan Streamlit Demo
+
+```bash
+cd streamlit
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+Aplikasi akan terbuka di browser. Fitur:
+- **Predict tab** — Input teks atau pilih sample, lihat hasil klasifikasi + confidence score
+- **EDA Insights tab** — Visualisasi dari notebook
+- **About tab** — Ringkasan project
+
+---
+
 ## Struktur Project
 
 ```
@@ -111,6 +126,10 @@ Fake News Detection/
 │   ├── model_best.pkl
 │   └── tfidf_vectorizer.pkl
 ├── images/                     # Visualisasi dari notebook
+├── streamlit/                  # Streamlit demo app
+│   ├── app.py
+│   ├── requirements.txt
+│   └── .streamlit/config.toml
 ├── docs/                       # Dokumentasi
 │   └── RUNNING_GUIDE.md
 ├── requirements.txt

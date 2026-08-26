@@ -146,6 +146,11 @@ Fake News Detection/
 │   └── 09_feature_importance_best.png
 ├── docs/
 │   └── RUNNING_GUIDE.md                  # Panduan menjalankan project
+├── streamlit/                            # Streamlit demo app
+│   ├── app.py                            # Main application
+│   ├── requirements.txt                  # App dependencies
+│   └── .streamlit/
+│       └── config.toml                   # Dark theme config
 ├── requirements.txt                      # Project dependencies
 ├── README.md                             # This file
 └── .gitignore
@@ -286,6 +291,14 @@ jupyter notebook
 
 Run in sequence: `01_eda.ipynb` → `02_preprocessing.ipynb` → `03_feature_extraction.ipynb` → `04_modeling.ipynb`
 
+### Run Streamlit Demo
+
+```bash
+cd streamlit
+pip install -r requirements.txt
+streamlit run app.py
+```
+
 > **Detailed guide**: [docs/RUNNING_GUIDE.md](docs/RUNNING_GUIDE.md)
 
 ### Load Trained Model
@@ -326,6 +339,7 @@ print(f"Prediction: {label}")
 - **Visualization**: Matplotlib, Seaborn
 - **Machine Learning**: Scikit-learn (LinearSVC, MultinomialNB, RandomForest, TF-IDF, GridSearchCV)
 - **Model Persistence**: Joblib
+- **Demo**: Streamlit
 - **Development**: Jupyter Notebook
 
 ---
